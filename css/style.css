@@ -1,0 +1,29 @@
+:root {
+	--color: #4af;
+	--text-color: #000000;
+	--bg-color: #ffffff;
+}
+body {
+	background-color: var(--bg-color);
+	height: 100vh;
+	display: flex;
+	margin: 0;
+}
+.btn-bg {
+	position: relative;
+	background-color: var(--color);
+	height: 100px;
+	width: 200px;
+	border-radius: 50px;
+	border: var(--color) 5px solid;
+}
+.btn-img {
+	position: absolute;
+	height: 100%;
+	width: auto;
+	transform: translateX(0%);
+}
+img {
+	height: 100%;
+	width: 100%;
+}
