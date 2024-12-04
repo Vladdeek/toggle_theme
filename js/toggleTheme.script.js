@@ -16,15 +16,21 @@ function loadFromLocalStorage() {
 }
 
 function changeTheme() {
-	const iconImage = document.querySelector('.theme-btn')
+	const iconImage = document.querySelector('.btn-icon')
 	const root = document.documentElement
+
+	//для анимации кнопки
+	const floatBTN = document.querySelector('.btn-img')
 
 	if (darkTheme === false) {
 		iconImage.src = 'img/moon-svgrepo-com.svg'
 		//iconImage.style.filter = 'invert(1)' // для векторных изображений черного цвета
 		root.style.setProperty('--text-color', '#fff')
 		root.style.setProperty('--bg-color', '#000')
-		root.style.setProperty('--color', '#20a')
+		root.style.setProperty('--color', '#0d3b66')
+
+		//для анимации кнопки
+		floatBTN.style.transform = 'translate(110%) rotate(270deg)'
 
 		darkTheme = true
 	} else if (darkTheme === true) {
@@ -32,7 +38,10 @@ function changeTheme() {
 		//iconImage.style.filter = 'invert(0)' // для векторных изображений черного цвета
 		root.style.setProperty('--text-color', '#000')
 		root.style.setProperty('--bg-color', '#fff')
-		root.style.setProperty('--color', '#4af')
+		root.style.setProperty('--color', '#00b4d8')
+
+		//для анимации кнопки
+		floatBTN.style.transform = 'translate(0%) rotate(0deg)'
 
 		darkTheme = false
 	}
